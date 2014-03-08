@@ -107,15 +107,6 @@ public class analyser {
 		outFile.close();
 	}
 
-	private static void find2Grams(File f) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private static void findWords(File f) {
-		// TODO Auto-generated method stub
-		
-	}
 	public static List<String> tokenize(String input) {
 		List<String> tokenList = new LinkedList<String>();
 		boolean isReading = false;

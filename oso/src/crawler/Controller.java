@@ -14,14 +14,14 @@ public class Controller {
 
             CrawlConfig config = new CrawlConfig();
             config.setCrawlStorageFolder(crawlStorageFolder);
-
+            config.setResumableCrawling(true);
             /*
              * Config User Agent String, Delay
              */
-            String userAgentString = "UCI IR 23082380 27209372 88886614";
+            String userAgentString = "UCI IR 23082380 88886614";
             config.setUserAgentString(userAgentString);
-            config.setMaxPagesToFetch(1);
-            config.setMaxDepthOfCrawling(1);
+            //config.setMaxPagesToFetch(1);
+            //config.setMaxDepthOfCrawling(1);
             final int politenessDelay = 300;
             config.setPolitenessDelay(politenessDelay);
 
@@ -38,10 +38,7 @@ public class Controller {
              * URLs that are fetched and then the crawler starts following links
              * which are found in these pages
              */
-            //controller.addSeed("http://www.ics.uci.edu/~welling/");
-            //controller.addSeed("http://djp3-pc2.ics.uci.edu/");
-            //controller.addSeed("http://calendar.ics.uci.edu/");
-            //controller.addSeed("http://drzaius.ics.uci.edu/");
+
             controller.addSeed("http://www.ics.uci.edu");
             //controller.addSeed("http://www.ics.uci.edu/~lopes/");
             /*

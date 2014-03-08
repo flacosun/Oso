@@ -19,6 +19,7 @@ public class Term {
 		this.indexEntryMap = new HashMap<Integer, IndexEntry>();
 		this.df = 0.0;
 		this.N = 0;
+		this.path = "data/terms/" + this.name + ".txt";
 	}
 	public void addIndex(int fileNumber, int position){
 		if(indexEntryMap.containsKey(fileNumber)){
@@ -40,7 +41,7 @@ public class Term {
 		PrintWriter outFile;
 		PrintWriter catalogFile;
 		try {
-			outFile = new PrintWriter(new BufferedWriter(new FileWriter("terms/" + this.name + ".txt", false)));
+			outFile = new PrintWriter(new BufferedWriter(new FileWriter(path, false)));
 			catalogFile = new PrintWriter(new BufferedWriter(new FileWriter("catalog.txt", true)));
 			catalogFile.println(name);
 			catalogFile.close();
@@ -82,6 +83,7 @@ public class Term {
 			e.printStackTrace();
 		}
 	}
+	private String path;
 	public String name;
 	public int N;
 	public Map<Integer, IndexEntry> indexEntryMap;
